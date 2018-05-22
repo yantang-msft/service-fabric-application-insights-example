@@ -5,6 +5,9 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.ApplicationInsights.Extensibility;
+using Microsoft.ApplicationInsights.ServiceFabric;
+using Microsoft.ApplicationInsights.ServiceFabric.Module;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.ServiceFabric.Services.Communication.AspNetCore;
@@ -39,11 +42,15 @@ namespace WebService
                                     .UseKestrel()
                                     .ConfigureServices(
                                         services => services
-                                            .AddSingleton<StatelessServiceContext>(serviceContext))
+                                            .AddSingleton<StatelessServiceContext>(serviceContext)
+                                            .AddSingleton<ITelemetryInitializer>((serviceProvider) => FabricTelemetryInitializerExtension.CreateFabricTelemetryInitializer(serviceContext))
+                                            .AddSingleton<ITelemetryModule>(new ServiceRemotingDependencyTrackingTelemetryModule())
+                                            .AddSingleton<ITelemetryModule>(new ServiceRemotingRequestTrackingTelemetryModule()))
                                     .UseContentRoot(Directory.GetCurrentDirectory())
                                     .UseStartup<Startup>()
                                     .UseServiceFabricIntegration(listener, ServiceFabricIntegrationOptions.None)
                                     .UseUrls(url)
+                                    .UseApplicationInsights()
                                     .Build();
                     }))
             };

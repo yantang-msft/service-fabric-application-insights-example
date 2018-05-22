@@ -5,6 +5,9 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.ApplicationInsights.Extensibility;
+using Microsoft.ApplicationInsights.ServiceFabric;
+using Microsoft.ApplicationInsights.ServiceFabric.Module;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.ServiceFabric.Services.Communication.AspNetCore;
@@ -22,7 +25,15 @@ namespace StatelessBackend
     {
         public StatelessBackend(StatelessServiceContext context)
             : base(context)
-        { }
+        {
+            var config = TelemetryConfiguration.Active;
+            config.TelemetryInitializers.Add(FabricTelemetryInitializerExtension.CreateFabricTelemetryInitializer(this.Context));
+
+            var requestTrackingModule = new ServiceRemotingRequestTrackingTelemetryModule();
+            var dependencyTrackingModule = new ServiceRemotingDependencyTrackingTelemetryModule();
+            requestTrackingModule.Initialize(config);
+            dependencyTrackingModule.Initialize(config);
+        }
 
         public Task<long> GetCountAsync()
         {
