@@ -5,11 +5,17 @@ VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "SFRemotingExample", "SFRemotingExample\SFRemotingExample.sfproj", "{D1030B01-AF27-4CEF-A778-0F71E7E3F254}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService", "WebService\WebService.csproj", "{6349C07A-FC0A-4AE6-BAE4-FE336921C646}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebService", "WebService\WebService.csproj", "{6349C07A-FC0A-4AE6-BAE4-FE336921C646}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatelessBackend", "StatelessBackend\StatelessBackend.csproj", "{FEC1C015-8C6D-4F3F-86D4-808888AF34FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StatelessBackend", "StatelessBackend\StatelessBackend.csproj", "{FEC1C015-8C6D-4F3F-86D4-808888AF34FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatelessBackend.Interfaces", "StatelessBackend.Interfaces\StatelessBackend.Interfaces.csproj", "{B50299DD-9680-4FCC-8A08-C57D1E71C7DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StatelessBackend.Interfaces", "StatelessBackend.Interfaces\StatelessBackend.Interfaces.csproj", "{B50299DD-9680-4FCC-8A08-C57D1E71C7DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatelessBackendRemotingV1", "StatelessBackendRemotingV1\StatelessBackendRemotingV1.csproj", "{D6A8AB46-5BCD-46F6-90E1-DB2E706FE5CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatelessBackendRemotingV1.Interfaces", "StatelessBackendRemotingV1.Interfaces\StatelessBackendRemotingV1.Interfaces.csproj", "{9248CEEC-C119-460E-A09B-CB5A581992C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceRemotingV1", "WebServiceRemotingV1\WebServiceRemotingV1.csproj", "{94D01E71-1B3C-4158-AA2A-63EB6A56A113}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +57,28 @@ Global
 		{B50299DD-9680-4FCC-8A08-C57D1E71C7DA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B50299DD-9680-4FCC-8A08-C57D1E71C7DA}.Release|x64.ActiveCfg = Release|Any CPU
 		{B50299DD-9680-4FCC-8A08-C57D1E71C7DA}.Release|x64.Build.0 = Release|Any CPU
+		{D6A8AB46-5BCD-46F6-90E1-DB2E706FE5CA}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{D6A8AB46-5BCD-46F6-90E1-DB2E706FE5CA}.Debug|x64.ActiveCfg = Debug|x64
+		{D6A8AB46-5BCD-46F6-90E1-DB2E706FE5CA}.Debug|x64.Build.0 = Debug|x64
+		{D6A8AB46-5BCD-46F6-90E1-DB2E706FE5CA}.Release|Any CPU.ActiveCfg = Release|x64
+		{D6A8AB46-5BCD-46F6-90E1-DB2E706FE5CA}.Release|x64.ActiveCfg = Release|x64
+		{D6A8AB46-5BCD-46F6-90E1-DB2E706FE5CA}.Release|x64.Build.0 = Release|x64
+		{9248CEEC-C119-460E-A09B-CB5A581992C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9248CEEC-C119-460E-A09B-CB5A581992C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9248CEEC-C119-460E-A09B-CB5A581992C5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9248CEEC-C119-460E-A09B-CB5A581992C5}.Debug|x64.Build.0 = Debug|Any CPU
+		{9248CEEC-C119-460E-A09B-CB5A581992C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9248CEEC-C119-460E-A09B-CB5A581992C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9248CEEC-C119-460E-A09B-CB5A581992C5}.Release|x64.ActiveCfg = Release|Any CPU
+		{9248CEEC-C119-460E-A09B-CB5A581992C5}.Release|x64.Build.0 = Release|Any CPU
+		{94D01E71-1B3C-4158-AA2A-63EB6A56A113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94D01E71-1B3C-4158-AA2A-63EB6A56A113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94D01E71-1B3C-4158-AA2A-63EB6A56A113}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{94D01E71-1B3C-4158-AA2A-63EB6A56A113}.Debug|x64.Build.0 = Debug|Any CPU
+		{94D01E71-1B3C-4158-AA2A-63EB6A56A113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94D01E71-1B3C-4158-AA2A-63EB6A56A113}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94D01E71-1B3C-4158-AA2A-63EB6A56A113}.Release|x64.ActiveCfg = Release|Any CPU
+		{94D01E71-1B3C-4158-AA2A-63EB6A56A113}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
