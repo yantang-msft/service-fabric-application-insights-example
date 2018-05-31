@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "SFRemotingExample", "SFRemotingExample\SFRemotingExample.sfproj", "{D1030B01-AF27-4CEF-A778-0F71E7E3F254}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService", "WebService\WebService.csproj", "{6349C07A-FC0A-4AE6-BAE4-FE336921C646}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebService", "WebService\WebService.csproj", "{6349C07A-FC0A-4AE6-BAE4-FE336921C646}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatelessBackend", "StatelessBackend\StatelessBackend.csproj", "{FEC1C015-8C6D-4F3F-86D4-808888AF34FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StatelessBackend", "StatelessBackend\StatelessBackend.csproj", "{FEC1C015-8C6D-4F3F-86D4-808888AF34FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatelessBackend.Interfaces", "StatelessBackend.Interfaces\StatelessBackend.Interfaces.csproj", "{B50299DD-9680-4FCC-8A08-C57D1E71C7DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StatelessBackend.Interfaces", "StatelessBackend.Interfaces\StatelessBackend.Interfaces.csproj", "{B50299DD-9680-4FCC-8A08-C57D1E71C7DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D1030B01-AF27-4CEF-A778-0F71E7E3F254}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{D1030B01-AF27-4CEF-A778-0F71E7E3F254}.Debug|Any CPU.Build.0 = Debug|x64
+		{D1030B01-AF27-4CEF-A778-0F71E7E3F254}.Debug|Any CPU.Deploy.0 = Debug|x64
 		{D1030B01-AF27-4CEF-A778-0F71E7E3F254}.Debug|x64.ActiveCfg = Debug|x64
 		{D1030B01-AF27-4CEF-A778-0F71E7E3F254}.Debug|x64.Build.0 = Debug|x64
 		{D1030B01-AF27-4CEF-A778-0F71E7E3F254}.Debug|x64.Deploy.0 = Debug|x64
