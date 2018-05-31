@@ -15,7 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatelessBackendRemotingV1"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatelessBackendRemotingV1.Interfaces", "StatelessBackendRemotingV1.Interfaces\StatelessBackendRemotingV1.Interfaces.csproj", "{9248CEEC-C119-460E-A09B-CB5A581992C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceRemotingV1", "WebServiceRemotingV1\WebServiceRemotingV1.csproj", "{94D01E71-1B3C-4158-AA2A-63EB6A56A113}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebServiceRemotingV1", "WebServiceRemotingV1\WebServiceRemotingV1.csproj", "{94D01E71-1B3C-4158-AA2A-63EB6A56A113}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActorBackendRemotingV1", "ActorBackendRemotingV1\ActorBackendRemotingV1.csproj", "{9A5571FD-3EB4-4526-9582-2DD52E781AC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActorBackendRemotingV1.Interfaces", "ActorBackendRemotingV1.Interfaces\ActorBackendRemotingV1.Interfaces.csproj", "{BCEBC4FB-ED1E-4BD5-9859-CFE67673F532}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +85,18 @@ Global
 		{94D01E71-1B3C-4158-AA2A-63EB6A56A113}.Release|Any CPU.Build.0 = Release|Any CPU
 		{94D01E71-1B3C-4158-AA2A-63EB6A56A113}.Release|x64.ActiveCfg = Release|Any CPU
 		{94D01E71-1B3C-4158-AA2A-63EB6A56A113}.Release|x64.Build.0 = Release|Any CPU
+		{9A5571FD-3EB4-4526-9582-2DD52E781AC7}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{9A5571FD-3EB4-4526-9582-2DD52E781AC7}.Debug|x64.ActiveCfg = Debug|x64
+		{9A5571FD-3EB4-4526-9582-2DD52E781AC7}.Debug|x64.Build.0 = Debug|x64
+		{9A5571FD-3EB4-4526-9582-2DD52E781AC7}.Release|Any CPU.ActiveCfg = Release|x64
+		{9A5571FD-3EB4-4526-9582-2DD52E781AC7}.Release|x64.ActiveCfg = Release|x64
+		{9A5571FD-3EB4-4526-9582-2DD52E781AC7}.Release|x64.Build.0 = Release|x64
+		{BCEBC4FB-ED1E-4BD5-9859-CFE67673F532}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{BCEBC4FB-ED1E-4BD5-9859-CFE67673F532}.Debug|x64.ActiveCfg = Debug|x64
+		{BCEBC4FB-ED1E-4BD5-9859-CFE67673F532}.Debug|x64.Build.0 = Debug|x64
+		{BCEBC4FB-ED1E-4BD5-9859-CFE67673F532}.Release|Any CPU.ActiveCfg = Release|x64
+		{BCEBC4FB-ED1E-4BD5-9859-CFE67673F532}.Release|x64.ActiveCfg = Release|x64
+		{BCEBC4FB-ED1E-4BD5-9859-CFE67673F532}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

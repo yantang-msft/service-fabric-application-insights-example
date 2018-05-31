@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights" Version="2.4.0" />
     <PackageReference Include="Microsoft.ApplicationInsights.ServiceFabric.Native" Version="2.1.1-beta1" />
     <!--<PackageReference Include="Microsoft.AspNetCore" Version="2.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.3" />
@@ -23,6 +24,7 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.0.2" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="1.0.2" />
     <PackageReference Include="Microsoft.ServiceFabric" Version="6.1.467" />
+    <PackageReference Include="Microsoft.ServiceFabric.Actors" Version="3.0.467" />
     <PackageReference Include="Microsoft.ServiceFabric.AspNetCore.Kestrel" Version="3.0.467" />
     <PackageReference Include="Microsoft.ServiceFabric.Data" Version="3.0.467" />
     <PackageReference Include="Microsoft.ServiceFabric.Services" Version="3.0.467" />
@@ -34,6 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ActorBackendRemotingV1.Interfaces\ActorBackendRemotingV1.Interfaces.csproj" />
     <ProjectReference Include="..\StatelessBackendRemotingV1.Interfaces\StatelessBackendRemotingV1.Interfaces.csproj" />
   </ItemGroup>
 
