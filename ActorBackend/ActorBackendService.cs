@@ -5,7 +5,9 @@ using Microsoft.ApplicationInsights.ServiceFabric.Module;
 using Microsoft.ServiceFabric.Actors;
 using Microsoft.ServiceFabric.Actors.Runtime;
 using System;
+using System.Collections.Generic;
 using System.Fabric;
+using System.Threading;
 
 namespace ActorBackend
 {
@@ -28,6 +30,7 @@ namespace ActorBackend
             TelemetryConfiguration.Active.InstrumentationKey = instrumentationKey;
             TelemetryConfiguration.Active.TelemetryInitializers.Add(new OperationCorrelationTelemetryInitializer());
             TelemetryConfiguration.Active.TelemetryInitializers.Add(new HttpDependenciesParsingTelemetryInitializer());
+            TelemetryConfiguration.Active.TelemetryInitializers.Add(new MyInitializer());
             new DependencyTrackingTelemetryModule().Initialize(TelemetryConfiguration.Active);
             new ServiceRemotingRequestTrackingTelemetryModule().Initialize(TelemetryConfiguration.Active);
             new ServiceRemotingDependencyTrackingTelemetryModule().Initialize(TelemetryConfiguration.Active);

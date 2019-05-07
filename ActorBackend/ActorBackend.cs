@@ -7,6 +7,7 @@ using Microsoft.ServiceFabric.Actors;
 using Microsoft.ServiceFabric.Actors.Runtime;
 using Microsoft.ServiceFabric.Actors.Client;
 using ActorBackend.Interfaces;
+using System.Diagnostics;
 
 namespace ActorBackend
 {
@@ -21,6 +22,8 @@ namespace ActorBackend
     [StatePersistence(StatePersistence.Persisted)]
     internal class ActorBackend : Actor, IActorBackend
     {
+        private readonly ActorId _actorId;
+
         /// <summary>
         /// Initializes a new instance of ActorBackend
         /// </summary>
@@ -29,6 +32,7 @@ namespace ActorBackend
         public ActorBackend(ActorService actorService, ActorId actorId)
             : base(actorService, actorId)
         {
+            _actorId = actorId;
         }
 
         /// <summary>
@@ -53,6 +57,8 @@ namespace ActorBackend
         /// <returns></returns>
         Task<int> IActorBackend.GetCountAsync(CancellationToken cancellationToken)
         {
+            Activity.Current.AddTag(_actorId.ToString(), DateTime.Now.ToString());
+            Activity.Current.AddTag("datasetId", new Random().Next().ToString());
             return this.StateManager.GetStateAsync<int>("count", cancellationToken);
         }
 
