@@ -8,5 +8,8 @@
     <Parameter Name="ActorBackendRemotingV1ActorService_PartitionCount" Value="1" />
     <Parameter Name="ActorBackendRemotingV1ActorService_TargetReplicaSetSize" Value="1" />
     <Parameter Name="ActorBackendRemotingV1ActorService_MinReplicaSetSize" Value="1" />
+    <Parameter Name="ActorBackendActorService_PartitionCount" Value="1" />
+    <Parameter Name="ActorBackendActorService_TargetReplicaSetSize" Value="1" />
+    <Parameter Name="ActorBackendActorService_MinReplicaSetSize" Value="1" />
   </Parameters>
 </Application>

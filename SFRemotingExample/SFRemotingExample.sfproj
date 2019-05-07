@@ -33,6 +33,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ActorBackendRemotingV1\ActorBackendRemotingV1.csproj" />
+    <ProjectReference Include="..\ActorBackend\ActorBackend.csproj" />
     <ProjectReference Include="..\StatelessBackendRemotingV1\StatelessBackendRemotingV1.csproj" />
     <ProjectReference Include="..\StatelessBackend\StatelessBackend.csproj" />
     <ProjectReference Include="..\WebServiceRemotingV1\WebServiceRemotingV1.csproj" />

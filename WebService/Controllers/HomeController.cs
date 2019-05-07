@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Fabric;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
+using ActorBackend.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.ServiceFabric.Actors;
+using Microsoft.ServiceFabric.Actors.Client;
 using Microsoft.ServiceFabric.Services.Remoting.Client;
 using StatelessBackend.Interfaces;
 using WebService.Models;
@@ -50,6 +54,17 @@ namespace WebService.Controllers
 
             IStatelessBackendService proxy = ServiceProxy.Create<IStatelessBackendService>(new Uri(serviceUri));
             long result = await proxy.GetCountAsync();
+
+            ViewData["Message"] = result;
+            return View("~/Views/Home/Index.cshtml");
+        }
+
+        public async Task<IActionResult> GetActorBackend()
+        {
+            string serviceUri = this.serviceContext.CodePackageActivationContext.ApplicationName + "/ActorBackendActorService";
+            IActorBackend proxy = ActorProxy.Create<IActorBackend>(ActorId.CreateRandom(), new Uri(serviceUri));
+
+            var result = await proxy.GetCountAsync(CancellationToken.None);
 
             ViewData["Message"] = result;
             return View("~/Views/Home/Index.cshtml");
