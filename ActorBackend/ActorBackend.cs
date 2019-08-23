@@ -7,6 +7,8 @@ using Microsoft.ServiceFabric.Actors;
 using Microsoft.ServiceFabric.Actors.Runtime;
 using Microsoft.ServiceFabric.Actors.Client;
 using ActorBackend.Interfaces;
+using StatelessBackend.Interfaces;
+using Microsoft.ServiceFabric.Services.Remoting.Client;
 
 namespace ActorBackend
 {
@@ -53,6 +55,11 @@ namespace ActorBackend
         /// <returns></returns>
         Task<int> IActorBackend.GetCountAsync(CancellationToken cancellationToken)
         {
+            string serviceUri = this.ActorService.Context.CodePackageActivationContext.ApplicationName + "/StatelessBackend";
+
+            IStatelessBackendService proxy = ServiceProxy.Create<IStatelessBackendService>(new Uri(serviceUri));
+            long result = proxy.GetCountAsync().Result;
+
             return this.StateManager.GetStateAsync<int>("count", cancellationToken);
         }
 

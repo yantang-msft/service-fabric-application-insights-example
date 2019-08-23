@@ -22,7 +22,7 @@ namespace StatelessBackend
         public StatelessBackend(StatelessServiceContext context)
             : base(context)
         {
-            var instrumentationKey = "<app insights instrumentation key>";
+            var instrumentationKey = "<downstream service instrumentation key>";
             TelemetryConfiguration.Active.TelemetryInitializers.Add(
                 FabricTelemetryInitializerExtension.CreateFabricTelemetryInitializer(this.Context)
             );

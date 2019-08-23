@@ -20,7 +20,7 @@ namespace ActorBackend
             ActorServiceSettings settings = null)
         : base(context, actorTypeInfo, actorFactory, stateManagerFactory, stateProvider, settings)
         {
-            var instrumentationKey = "<app insights instrumentation key>";
+            var instrumentationKey = "<actor instrumentation key>";
             TelemetryConfiguration.Active.TelemetryInitializers.Add(
                 FabricTelemetryInitializerExtension.CreateFabricTelemetryInitializer(this.Context)
             );

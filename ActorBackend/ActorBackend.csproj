@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ActorBackend.Interfaces\ActorBackend.Interfaces.csproj" />
+    <ProjectReference Include="..\StatelessBackend.Interfaces\StatelessBackend.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>
